@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://radial-risk-2bf.notion.site/images/favicon.ico">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .body_margin {
+            width: 708px;
+            margin: auto;
+        }
+
+        .top_nav {
+            width: 100%;
+            height: 45px;
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            z-index: 1;
+            line-height: 45px;
+            font-size: 14px;
+            color: #37352f;
+        }
+
+        .top_pl {
+            float: left;
+            padding-left: 30px;
+        }
+
+        .top_m {
+            width: 708px;
+            margin: auto;
+        }
+
+        .top_head {
+            width: 100%;
+            height: 250px;
+            border-bottom: 1px solid #e1e1e1;
+            background: url(https://t1.daumcdn.net/cfile/tistory/1965B148508A1E1F28) no-repeat;
+            background-position: 50% 60%;
+            background-size: 100%;
+        }
+
+        .top_head h1 {
+            color: #fff;
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            top: 108px;
+        }
+
+        #menuicon {
+            display: none;
+        }
+
+        #menuicon:checked~.cbody {
+            display: block;
+        }
+
+        .cbody {
+            display: none;
+        }
+
+
+
+        input[id="menuicon"] {
+            display: none;
+        }
+
+        input[id="menuicon"]+label {
+            display: block;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        input[id="menuicon"]+label span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            border-radius: 30px;
+            background: #37352f;
+            transition: all .35s;
+        }
+
+        input[id="menuicon"]+label span:nth-child(1) {
+            top: 0;
+        }
+
+        input[id="menuicon"]+label span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        input[id="menuicon"]+label span:nth-child(3) {
+            bottom: 0;
+        }
+
+        input[id="menuicon"]:checked+label span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        input[id="menuicon"]:checked+label span:nth-child(2) {
+            opacity: 0;
+        }
+
+        input[id="menuicon"]:checked+label span:nth-child(3) {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+
+
+
+        h2 {
+            color: #37352f;
+            font-weight: 600;
+            font-size: 30px;
+            padding: 12px 3px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            color: #37352f;
+            font-size: 16px;
+            margin-left: 32px;
+            padding: 6px 4px;
+        }
+
+        .hr {
+            border-bottom: 1px solid #e1e1e1;
+            padding: 4px;
+        }
+
+        ol li {
+            color: #37352f;
+            font-size: 24px;
+            margin-left: 28px;
+            padding: 6px 4px;
+            font-weight: 600;
+            margin-top: 24px;
+        }
+
+        .font_b {
+            color: #000;
+            font-weight: 600;
+        }
+
+        p {
+            color: #37352f;
+            font-size: 20px;
+            padding: 6px 4px;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        .bottom_m {
+            width: 100%;
+            height: 300px;
+        }
+
+        .top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;  
+        }
+
+        .top a {
+            text-decoration: none;
+            color: orange;
+            font-weight: 700;
+            padding: 3px;
+            border: 3px solid rgb(75, 75, 75);
+            border-radius: 6px;
+        }
+    </style>
+    <title>Day 4. HTML</title>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <div class="top_nav">
+        <div class="top_pl">SK SIAT / Day 4. HTML</div>
+    </div>
+
+    <div class="top_head">
+        <div class="top_m">
+            <h1>Day 4. HTML</h1>
+        </div>
+    </div>
+
+    <!-- main_body -->
+    <div class="body_margin">
+        <br>
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+
+
+
+
+        <div class="cbody">
+            <h2>Day 2에 배운 것</h2>
+            <ul>
+                <li>컴파일언어: 한 번에 번역/인터프리터 언어: 한 줄씩 번역</li>
+                <li>텍스트 -> 숫자 (인코딩)/숫자 -> 텍스트 (디코딩)</li>
+                <li>1byte=8bit</li>
+                <li>자바스크립트 사용 시기:1995년/HTML로 이루어진 파일이 서버에 있고, 브라우저는 해당 파일을 받아서 다시 우리에게 공유</li>
+                <li>키오스크- 주로 파이썬 언어로 만들어짐</li>
+                <li>텍스트 데이터: 수정가능/ 바이너리 데이터(이미지 등): 수정불가능</li>
+            </ul>
+            <div class="hr"></div>
+            <h2>Day 3 학습내용</h2>
+            <ol start="0">
+                <li>기본 개념</li>
+            </ol>
+            <ul>
+                <li>인터넷 : 웹이 나오기 전부터 만들어진 컴퓨터 연결 네트워크</li>
+                <li>웹 : 인터넷을 활용하는 응용서비스들 중의 하나, 서버와 브라우저 둘이 정보를 전달하고 공유하는 방식으로 운영.</li>
+                <li>
+                    웹 발달단계 :<br>
+                    1.0 : 문서를 표현하는 정적(static)인 웹사이트(89~90년대 중반까지)<br>
+                    2.0 : 동적인 페이지가 나오기 시작 - 자바스크립트의 출현 때문<br>
+                    3.0 : 더 화려하게 움직일 수 있도록 만드는 애니메이션 효과...CGI(Common Gateway Interface)<br>
+                    4.0 : HTML5이 표준, 자바스크립트도 표준, 문서를 공유하여 모든 데이터 종류를 주고 받을 수 있는 시대 도래.
+                    </pre>
+                </li>
+            </ul>
+            <ol start="1">
+                <li>HTML, CSS, JS는</li>
+            </ol>
+            <ul>
+                <li>웹을 구성하는 3개 언어입니다.</li>
+                <p>가. 한 짤로 보는 HTML과 HTML5</p>
+                <li class="font_b">html</li>
+                <img src="https://lh6.googleusercontent.com/2vpkHqVKh2JWOp1vgVTt_o5AxfJMuDiDElWxgGlt5Rk74ukwIowcJ11sCpvsvSA9i0LNigqj405jFLr1pwGdaF0RHPAS4uUkRQ9mzC1Zb6fkobah8vGLZhH2YJDFL-xSwQ3Lib70"
+                    width="680px" height="550px">
+                <li class="font_b">html5</li>
+                <img src="https://lh6.googleusercontent.com/YtFs492KEzn0Bty-Xlq5otNXSVsBsJCi7O2JhJPgSF-AixX_PLQsaef53UT7AMZfCulZTvLj0jwX-sL3rAVrj_w9iJyCaA6KsfX3RavVXxJ5pMmK01gpPMJCff_5jgkw00sYfoyF"
+                    width="680px" height="496px">
+                <p>나. 한 짤로 보는 html, css, javascript</p>
+                <li class="font_b">html</li>
+                <img src="https://radial-risk-2bf.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa2fe18fd-a609-4c3d-9a8a-ed830b978430%2FUntitled.png?table=block&id=5aff144f-8f9c-4905-b038-eaa414ad1a4d&spaceId=d1a988f4-e527-4f37-84f2-5cf57ae3d75a&width=1830&userId=&cache=v2"
+                    width="680px" height="95px">
+                <li class="font_b">css</li>
+                <img src="https://lh4.googleusercontent.com/81SAvGFjHT_GH7Xhy2I559ERvpPn6REwqeFSanu-8yZmRVsO1ATq9WhRVzwdXJVJBlPwomTvWjq52sc4lWTcMRxjTLDGuPC9QNP3Y0H3-1cjDeBSs8CGmJq2LCdvL1Cf0OUzFn0n"
+                    width="680px" height="88px">
+                <li class="font_b">javascript</li>
+                <img src="https://lh4.googleusercontent.com/xudfZNa2Xk0EOufg3gtwo2LLMFEVVki0t7ffJl2CPzSxjuet5rEEyhSWdLVyW9DzmAsTuZa48rnp6iulOSrJhS3jbx0Rjpbxn9RUlSDlYXyzU5QQlndkOfTy_C680EwjIVql7cll"
+                    width="680px" height="297px">
+            </ul>
+            <ol start="3">
+                <li>Server</li>
+            </ol>
+            <img src="https://radial-risk-2bf.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F19880859-1d73-4570-8401-483b07b612d8%2FUntitled.png?table=block&id=ac0d33c2-9377-41fe-b23c-4059d6b227e3&spaceId=d1a988f4-e527-4f37-84f2-5cf57ae3d75a&width=1580&userId=&cache=v2"
+                width="680px" height="248px">
+            <br><br>
+            <ul>
+                <li>서버<br><br>
+                    서버는 일반적으로 클라이언트라고 불리는 사용자에게 서비스를 제공하는 소프트웨어 또는 하드웨어입니다.
+                    <br><br>
+                    하드웨어 서버는 네트워크의 공유 컴퓨터로서, 대개 강력하고 데이터 센터에 저장됩니다. 소프트웨어 서버(하드웨어 서버에서 자주 실행됨)는 클라이언트 프로그램에 서비스를 제공하는
+                    프로그램 또는 사용자 클라이언트의 user interface을 말합니다.
+                </li>
+                <li>웹클라이언트
+                    <ul>
+                        <li>사용자와 컴퓨터 간에 대화할 수 있도록 모양새를 갖추는 것</li>
+                        <li>웹서버에 문서, 정보 등을 요청하고 받아서 사용자에게 출력해주는 역할을 하는 것</li>
+                    </ul>
+                </li>
+            </ul>
+            <ol start="4">
+                <li>도메인과 URL / URI</li>
+            </ol>
+            <ul>
+                <li>IP(Internet Protocol)주소 : .(점) 3개 사이를 숫자로 표현해서 번호를 매긴 것</li>
+                <li>도메인 주소 : IP주소를 알아보기 쉽게 하기 위해 의미를 가진 뚜껑을 씌운 것
+                    <ul>
+                        <li>URI(Uniform Resource Identifier) : 리소스를 가리키는 모든 종류의 문자열</li>
+                        <li>URL(Unifrom Resource Locator) : 인터넷에서 웹페이지, 이미지, 비디오 등의 '위치'를 가리키는 문자열
+                            <ul>
+                                <li>
+                                    프로토콜&emsp; http://<br>
+                                    서버주소&emsp; 127.0.0.1<br>
+                                    TCP/IP 포트번호&emsp; :5500<br>
+                                    경로명&emsp; /01_html/<br>
+                                    파일이름&emsp; 1.html
+                                </li>
+                            </ul>
+                        </li>
+                        <ol start="5">
+                            <li>도메인주소를 입력했을 때 클라이언트(브라우저)는 무슨 일을 하는가</li>
+                        </ol>
+                        <li>브라우저의 구조</li>
+                        <img src="https://radial-risk-2bf.notion.site/image/https%3A%2F%2Fbeomy.github.io%2Fassets%2Fimg%2Fposts%2Fbrowser%2Fbrowser_architecture.png?table=block&id=e5bfc079-5285-4177-b29a-841aa5a1aea0&spaceId=d1a988f4-e527-4f37-84f2-5cf57ae3d75a&width=2000&userId=&cache=v2"
+                            width="652px" height="474px">
+                        <li>렌더링 엔진이 하는 일<br><br>
+                            <ul>
+                                <li>렌더 트리 생성 (DOM + CSSOM)<br><br>
+                                    가. DOM TREE<br><br>
+                                    나. CSSOM TREE<br><br>
+                                    다. 렌더 트리 생성 (DOM + CSSOM)
+                                </li>
+                                <li>레이아웃 - 렌더 트리가 생성되고, 기기의 뷰포트 내에서 렌더 트리의 노드가 정확한 위치와 크기를 계산하는 과정</li>
+                                <li>페인트 - 렌더 트리의 각 노드를 화면의 실제 픽셀로 나타내는 과정</li>
+                                <li>리플로우(Reflow), 리페인트(Repaint)<br>
+                                    사용자가 웹 페이지에 처음 접속을 하면, 렌더링 과정을 거쳐서 화면에 모든 요소가 그려집니다. 이후에 사용자의 액션에서 발생되는 이벤트로 인해서 새로운
+                                    HTML 요소가 추가되거나, 기존 요소의 스타일이 바뀌거나 하는 변경이 일어나게 됩니다. 이런 변경을 통해 영향을 받게되는 모든 노드에 대해서 렌더링
+                                    트리 생성과 레이아웃 과정을 다시 수행하게 됩니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="bottom_m"></div>
+
+            
+
+        </div>
+    </div>
+    <div class="top">
+        <a href="#header"><span>TOP</span></a>
+
+</body>
+
+</html>
+<!-- 후기 : 웹 페이지랑 최대한 비슷하게 만들어보면서 재밌는 버튼도 추가했다. 오랜만에 코딩하니 살짝 막힘이 있었지만 재미있었다!!~ -->
