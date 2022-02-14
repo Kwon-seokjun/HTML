@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello main page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .margin {
+            width: 900px;
+            height: 100%;
+            background-color: #555;
+            margin: auto;
+        }
+
+        header {
+            width: 100%;
+            height: 245px;
+            background-color: skyblue;
+            font-size: 14px;
+        }
+
+        .head_top {
+            width: 100%;
+            height: 45px;
+            background-color: #e1e1e1;
+            line-height: 45px;
+        }
+
+        .top_pl {
+            float: left;
+            padding-left: 30px;
+            color: #37352f;
+            ;
+        }
+
+        .top_r {
+            float: right;
+            margin-right: 10px;
+            margin-top: 12px;
+        }
+
+        .head_banner {
+            width: 100%;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+
+        input[id="menuicon"] {
+            display: none;
+        }
+
+        input[id="menuicon"]+label {
+            display: block;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        input[id="menuicon"]+label span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            border-radius: 30px;
+            background: #37352f;
+            transition: all .35s;
+        }
+
+        input[id="menuicon"]+label span:nth-child(1) {
+            top: 0;
+        }
+
+        input[id="menuicon"]+label span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        input[id="menuicon"]+label span:nth-child(3) {
+            bottom: 0;
+        }
+
+        input[id="menuicon"]:checked+label span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        input[id="menuicon"]:checked+label span:nth-child(2) {
+            opacity: 0;
+        }
+
+        input[id="menuicon"]:checked+label span:nth-child(3) {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+
+        main {
+            width: 100%;
+            height: 700px;
+            background-color: gray;
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            background-color: #eee;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .box p {
+            text-align: center;
+            line-height: 200px;
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="head_top">
+            <div class="top_nav">
+                <div class="top_pl">SK SIAT / HTML</div>
+
+                <!-- 메뉴 -->
+                <div class="top_r">
+                    <input type="checkbox" id="menuicon">
+                    <label for="menuicon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+
+            </div>
+        </div>
+        <div class="head_banner">
+            <img src="" alt="">
+            <p>banner</p>
+        </div>
+    </header>
+
+    <div class="margin">
+        <main>
+
+            <div class="box">
+                
+                <a href="https://kwon-seokjun.github.io/HTML/Day4.html#header"><p>web 수업</p></a>
+            </div>
+            <div class="box">
+                
+                <a href="https://kwon-seokjun.github.io/HTML/Day4.html#header"><p>HTML 수업</p></a>
+            </div>
+            <div class="box">
+                <p>내용3</p>
+                <a href=""></a>
+            </div> 
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="margin">
+            <p>footer</p>
+        </div>
+    </footer>
+</body>
+
+</html>
