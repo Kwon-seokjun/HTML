@@ -1,0 +1,30 @@
+html {
+    font-size: 20px;
+    background-color: #d2c4ff;
+  }
+  
+  #p1 {
+    color : yellowgreen;
+  }
+  
+  .class1 {
+    font-size: 30px;
+  }
+  
+  /* 속성 선택자
+  태그 [속성]
+  태그 [속성=값]
+  title이 네이버인 친구만 폰트컬러를 그린으로바꿔주세요
+  */
+  
+  a[title='네이버'] {
+    color: green;
+  }
+  
+  input[placeholder]{
+    background-color: skyblue;
+  }
+  
+  #div1 {
+    color: pink;
+  }
