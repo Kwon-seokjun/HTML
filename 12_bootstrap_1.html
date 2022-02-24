@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
+  <title>Document</title>
+  <style>
+    .ex1 {
+      border: 1px black solid;
+    }
+  </style>
+</head>
+
+<body>
+
+  1. Grid - Layout의 세번째 확인 : 화면을 column으로 12등분 되어있다고 생각해서 배치합니다. <br>
+  <!-- fluid - margin 없이 공간을 꽉 채운 container를 만들고 싶을 때 -->
+  <div class="container-fluid ex1">
+    <div class="row">
+      <!-- 4칸 밀어내고 md사이즈에 반응하는 4칸을 사용합니다 -->
+      <!-- offset-md-4 : 앞의 공간 4칸을 비운다 -->
+      <div class="col-md-4 offset-4 ex1">hello</div>
+      <div class="col-md-2 ex1">hello</div>
+      <div class="col-md-1 ex1">hello</div>
+      <div class="col-md-1 ex1" style="overflow: hidden;">hello</div>
+    </div>
+  </div>
+  <hr>
+  <!-- <div class="container111">
+            <div class="col-4">hello</div>
+            <div class="col-4">hello</div>
+            <div class="col-4">hello</div>
+    </div> -->
+  2. 제목 - Content > Typography : 제목은 display 권장
+  <h1>제목입니다</h1>
+  <h1 class="display-1">Display 1</h1>
+  <h1 class="display-2">Display 2</h1>
+  <h1 class="display-3">Display 3</h1>
+  <h1 class="display-4">Display 4</h1>
+  <h1 class="display-5">Display 5</h1>
+  <h1 class="display-6">Display 6</h1>
+  <hr>
+  3. Image - Content > Image 확인하세요
+  <div class="container">
+    <div class="row">
+      <div class="ex1 col-md-3"><img src="data/ddalat.jfif" class="img-fluid" alt="img-fluid - 반응형"></div>
+      <div class="ex1 col-md-3"><img src="data/ddalat.jfif" alt="clas 지정 없음"></div>
+      <div class="ex1 col-md-3"><img src="data/ddalat.jfif" class="img-thumbnail" alt="img-thumbnail"></div>
+      <div class="ex1 col-md-3"><img src="data/ddalat.jfif" class="float-start" alt="rounded float-start">
+      </div>
+      <div class="row">
+        <div class="ex1 col-md-3"><img src="data/ddalat.jfif" class="rounded float-end" alt="rounded float-end"></div>
+        <div class="ex1 col-md-3"><img src="data/ddalat.jfif" class="rounded mx-auto d-block"
+            alt="rounded mx-auto d-block">dad</div>
+        <div class="ex1 col-md-3">
+          <div class="text-center">
+            <img src="data/ddalat.jfif" class="rounded" alt="rounded">dad
+          </div>
+        </div>
+        <div class="ex1 col-md-3">
+          <picture>
+            <source srcset="data/ddalat.jfif" type="image/svg+xml">
+            <img src="data/ddalat.jfif" class="img-fluid img-thumbnail" alt="img-fluid img-thumbnail">
+          </picture>
+        </div>
+      </div>
+    </div>
+    <hr>
+    4. 테이블 - Component > Table - class에서 필요한 기능 각각 첨가
+    <table class="table table-success table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td class="table-danger text-danger">@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+    5. Color - Customize > color 참조
+    <div class="bd-content ps-lg-4">
+
+
+      <h2 id="theme-colors">Theme colors</h2>
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="p-3 mb-3 bg-primary text-white">Primary</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 mb-3 bg-secondary text-white">Secondary</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 mb-3 bg-success text-white">Success</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 mb-3 bg-danger text-white">Danger</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 mb-3 bg-warning text-dark">Warning</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 mb-3 bg-info text-dark">Info</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 mb-3 bg-light text-dark">Light</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 mb-3 bg-dark text-white">Dark</div>
+        </div>
+      </div>
+      Utilities > colors 참조하여 글자색만(text-primary) 바꿔보기
+      <div class="text-primary">This is default primary text</div>
+      <div class="text-primary text-opacity-75 bg-danger bg-opacity-50">This is 75% opacity ` text</div>
+      <div class="text-primary text-opacity-50">This is 50% opacity primary text</div>
+      <div class="text-primary text-opacity-25">This is 25% opacity primary text</div>
+      <hr>
+      6. 버튼 - Component > Button<br>
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-light">Light</button>
+      <button type="button" class="btn btn-dark">Dark</button>
+      <button type="button" class="btn btn-link">Link</button>
+      <br>
+      필요한 조각들은 Component에서 찾을 수 있습니다.
+      <hr>
+      7. 실습 - 아래의 버튼그룹을 꾸며보세요.
+      <br>
+      <br>
+      <div class="btn-group " role="group" aria-label="Button group with nested dropdown">
+        <button type="button" class="btn btn-success">1</button>
+        <button type="button" class="btn btn-success">2</button>
+        <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropdown
+          </button>
+          <ul class="dropdown-menu " aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item text-success" href="#">Dropdown link</a></li>
+            <li><a class="dropdown-item text-success" href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      8.아코디언
+      <br><br>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button text-light bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button text-light bg-danger collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button text-light bg-danger collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <br><br><br><br><br><br>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+      <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
