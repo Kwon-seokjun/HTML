@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL COUNT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: yellowgreen;
+        }
+
+        h1,
+        h2 {
+            color: white;
+        }
+        
+        h1 {
+            font-size: 58px;
+        }
+
+        h2 {
+            font-size: 50px;
+            margin-bottom: 100px;
+            margin-top: 20px;
+        }
+
+        .btn1, .btn2 {
+            background: white;
+            color: yellowgreen;
+            border: none;
+            /* position: relative; */
+            height: 60px;
+            font-size: 1.6em;
+            cursor: pointer;
+            transition: .3s ease all;
+            /* outline: none; */
+            line-height: 60px;
+        }
+
+        .btn1 {
+            width: 220px;
+        }
+
+        .btn2 {
+            width: 446px;
+        }
+
+        button:hover {
+            background-color: #1AAB8A;
+            color: white;
+        }
+
+        #number {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DIGITAL COUNT</h1>
+    <h2 id="number">0</h2>
+    <button class="btn1" onclick="decrese()">-</button>
+    <button class="btn1" onclick="increse()">+</button><br><br>
+    <button class="btn2" onclick="reset()">RESET</button>
+
+    <script>
+
+        function decrese() {
+            var tmp = document.getElementById('number').innerText;
+            tmp--;
+            document.getElementById('number').innerText = tmp;
+            if (tmp < 0) {
+                reset();
+            }
+        }
+
+        function increse() {
+            var tmp = document.getElementById('number').innerText;
+            tmp++;
+            document.getElementById('number').innerText = tmp;
+        }
+
+        function reset() {
+            var tmp = document.getElementById('number').innerText = '0';
+        }
+
+    </script>
+</body>
+
+</html>
