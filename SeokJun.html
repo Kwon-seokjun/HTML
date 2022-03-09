@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* sidenav1 */
+        .sidenav1 {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 20%;
+            background-color: #8eb695;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav1 a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .sidenav1 a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav1 a.closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-right: 50px;
+        }
+
+        /* sidenav2 */
+        .sidenav2 {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 20%;
+            background-color: #fbdea2;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav2 a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .sidenav2 a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav2 a.closebtn {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+    </style>
+    <title>Time Chart</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- donutchart1 -->
+    <script type="text/javascript">
+        google.charts.load("current", {
+            packages: ["corechart"]
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['', ''],
+                ['6시', 2],
+                ['7시', 3],
+                ['8시', 4],
+                ['9시', 11],
+                ['10시', 3]
+            ]);
+
+            var options = {
+                title: 'Wake Up Time Chart',
+                pieHole: 0.4,
+                backgroundColor: '#8eb695',
+                titleTextStyle: {color:'#fff',},
+                pieSliceTextStyle: {
+                    color: '#fff',
+                },
+                legend: {position: 'top', textStyle: {color: '#fff'}}
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+    <!-- donutchart2 -->
+
+<script type="text/javascript">
+    google.charts.load("current", {
+        packages: ["corechart"]
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['', ''],
+            ['10시', 1],
+            ['11시', 7],
+            ['12시', 11],
+            ['01시', 4],
+            ['02시', 2]
+        ]);
+
+        var options = {
+            title: 'Bed Time Chart',
+            pieHole: 0.4,
+            backgroundColor: '#fbdea2',
+            titleTextStyle: {color:'#fff',},
+            pieSliceTextStyle: {
+                color: '#fff',
+            },
+            legend: {position: 'top', textStyle: {color: '#fff'}}
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
+        chart.draw(data, options);
+    }
+</script>
+
+<body>
+    <div class="leftbox"></div>
+    <div class="rightbox"></div>
+
+    <!-- leftopen -->
+    <h2>Wake Up Time Chart</h2>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav1()">&#9776; open</span>
+
+    <div id="mySidenav1" class="sidenav1">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+        <div id="donutchart2" style="width: 900px; height: 500px;"></div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <!-- rightopen -->
+    <h2>Bed Time Chart</h2>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav2()">&#9776; open</span>
+
+    <div id="mySidenav2" class="sidenav2">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div id="donutchart1" style="width: 900px; height: 500px;"></div>
+    </div>
+
+
+    <script>
+        function openNav1() {
+            document.getElementById("mySidenav1").style.width = "50%";
+        }
+
+        function closeNav1() {
+            document.getElementById("mySidenav1").style.width = "0";
+        }
+
+        function openNav2() {
+            document.getElementById("mySidenav2").style.width = "50%";
+        }
+
+        function closeNav2() {
+            document.getElementById("mySidenav2").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>
